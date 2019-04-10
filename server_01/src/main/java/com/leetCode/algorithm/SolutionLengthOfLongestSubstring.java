@@ -2,7 +2,9 @@ package com.leetCode.algorithm;
 
 import org.apache.commons.lang.StringUtils;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -14,11 +16,29 @@ public class SolutionLengthOfLongestSubstring {
     public static void main(String[] args) {
         SolutionLengthOfLongestSubstring ss = new SolutionLengthOfLongestSubstring();
         String s =  " dsa dsadsad dsadsa";
-        int i = ss.lengthOfLongestSubstring1(s);
+        int i = ss.lengthOfLongestSubstring2(s);
         System.out.println(i);
     }
 
 
+    //优化二
+    public int lengthOfLongestSubstring2 (String s) {
+
+        int n = s.length();
+        int ans = 0;
+        Map<Character, Integer> map = new HashMap<>();
+        for (int i = 0, j =0; j < n; j++ ) {
+            if (map.containsKey(s.charAt(j))) {
+                i = Math.max(map.get(s.charAt(j)), i);
+            }
+            ans = Math.max(ans, j - i + 1);
+            map.put(s.charAt(j), j + 1);
+        }
+
+        return ans;
+    }
+
+    // 优化一
     public int lengthOfLongestSubstring1 (String s) {
 
         Set<Character> set = new HashSet<>();
@@ -27,10 +47,12 @@ public class SolutionLengthOfLongestSubstring {
         int i =0 ,j = 0;
         while (i < n && j < n) {
             if (!set.contains(s.charAt(j))) {
+                System.out.println("j:" + j);
                 set.add(s.charAt(j++));
                 ans = Math.max(ans, j - i);
             } else {
-                set.remove(i++);
+                set.remove(s.charAt(i++));
+                System.out.println("i:" + i);
             }
         }
 
