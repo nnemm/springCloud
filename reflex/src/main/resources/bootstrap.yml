@@ -1,0 +1,21 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: 127.0.0.1:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+    healthcheck:
+      enabled: true
+
+server:
+  port: 8899
+
+# logback配置
+logging:
+  config: classpath:logback-spring.xml
+
+spring:
+  application:
+    name: reflex
+

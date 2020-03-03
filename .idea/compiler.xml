@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eureka_01" />
+        <module name="reflex" />
         <module name="server_01" />
       </profile>
     </annotationProcessing>

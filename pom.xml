@@ -18,6 +18,7 @@
     <modules>
         <module>eureka_01</module>
         <module>server_01</module>
+        <module>reflex</module>
     </modules>
 
     <properties>
@@ -32,6 +33,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>skip</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.20</version>
         </dependency>
     </dependencies>
 
