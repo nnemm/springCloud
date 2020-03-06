@@ -5,5 +5,6 @@
     <file url="file://$PROJECT_DIR$/eureka_01" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/reflex" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server_01" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul" charset="UTF-8" />
   </component>
 </project>

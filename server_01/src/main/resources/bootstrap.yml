@@ -1,8 +1,11 @@
 eureka:
   client:
     serviceUrl:
+      #设置EurekaServer的地址
       defaultZone: http://localhost:8888/eureka/
-
+  #指定主机名
+  instance:
+    hostname: server_01
 server:
   port: 8889
 

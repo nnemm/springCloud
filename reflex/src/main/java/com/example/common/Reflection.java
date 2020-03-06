@@ -14,9 +14,9 @@ public class Reflection {
 
         ClassLoader classLoader = clazz.getClassLoader();
 
-        Class<?> name = clazz.forName("com.example.common.ReflectTest");
-        Object o = name.newInstance();
-        System.out.println(o);
+//        Class<?> name = clazz.forName("ReflectTest");
+//        Object o = name.newInstance();
+//        System.out.println(o);
 
 
     }

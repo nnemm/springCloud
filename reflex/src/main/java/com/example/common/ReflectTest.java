@@ -10,9 +10,5 @@ public class ReflectTest {
 
     private String type;
 
-    public ReflectTest() {}
 
-    public ReflectTest(String name, String type) {
-
-    }
 }
